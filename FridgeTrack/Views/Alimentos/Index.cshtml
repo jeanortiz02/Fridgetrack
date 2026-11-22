@@ -1,0 +1,40 @@
+@model List<Alimento>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title>FridgeTrack</title>
+</head>
+<body>
+    <h1>FridgeTrack - Lo que hay en mi refrigerador</h1>
+
+    <p><a asp-action="Crear">Agregar alimento</a></p>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Categoria</th>
+            <th>Cantidad</th>
+            <th>Vence</th>
+            <th></th>
+        </tr>
+        @foreach (var alimento in Model)
+        {
+            <tr>
+                <td>@alimento.Nombre</td>
+                <td>@alimento.Categoria</td>
+                <td>@alimento.Cantidad</td>
+                <td>@alimento.FechaVencimiento.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <a asp-action="Detalle" asp-route-id="@alimento.Id">Ver</a> |
+                    <a asp-action="Editar" asp-route-id="@alimento.Id">Editar</a> |
+                    <a asp-action="Eliminar" asp-route-id="@alimento.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <p>Total de alimentos: @Model.Count</p>
+</body>
+</html>

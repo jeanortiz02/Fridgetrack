@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FridgeTrack.Tests/FridgeTrack.Tests.csproj" />
+  <Project Path="FridgeTrack/FridgeTrack.csproj" />
+</Solution>

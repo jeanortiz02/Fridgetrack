@@ -1,0 +1,25 @@
+@model Alimento
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title>Eliminar alimento</title>
+</head>
+<body>
+    <h1>Eliminar alimento</h1>
+
+    <p>¿Seguro que quieres eliminar este alimento?</p>
+
+    <p><b>Nombre:</b> @Model.Nombre</p>
+    <p><b>Categoria:</b> @Model.Categoria</p>
+    <p><b>Cantidad:</b> @Model.Cantidad</p>
+    <p><b>Fecha de vencimiento:</b> @Model.FechaVencimiento.ToString("dd/MM/yyyy")</p>
+
+    <form asp-action="ConfirmarEliminar" asp-route-id="@Model.Id" method="post">
+        <button type="submit">Si, eliminar</button>
+    </form>
+
+    <p><a asp-action="Index">Cancelar</a></p>
+</body>
+</html>

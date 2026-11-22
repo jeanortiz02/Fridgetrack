@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f7fa;
+    color: #333;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+h1 {
+    color: #1f6f8b;
+}
+
+a {
+    color: #1f6f8b;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #1f6f8b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+input {
+    padding: 6px;
+    width: 250px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #1f6f8b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #155a72;
+}
+
+.field-validation-error {
+    color: red;
+    font-size: 14px;
+}

@@ -1,0 +1,21 @@
+@model Alimento
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title>@Model.Nombre</title>
+</head>
+<body>
+    <h1>@Model.Nombre</h1>
+
+    <p><b>Categoria:</b> @Model.Categoria</p>
+    <p><b>Cantidad:</b> @Model.Cantidad</p>
+    <p><b>Fecha de vencimiento:</b> @Model.FechaVencimiento.ToString("dd/MM/yyyy")</p>
+
+    <p>
+        <a asp-action="Editar" asp-route-id="@Model.Id">Editar</a> |
+        <a asp-action="Index">Volver a la lista</a>
+    </p>
+</body>
+</html>

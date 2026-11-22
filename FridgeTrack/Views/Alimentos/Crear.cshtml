@@ -1,0 +1,37 @@
+@model Alimento
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title>Agregar alimento</title>
+</head>
+<body>
+    <h1>Agregar alimento</h1>
+
+    <form asp-action="Crear" method="post">
+        <p>
+            Nombre:<br />
+            <input asp-for="Nombre" />
+            <span asp-validation-for="Nombre"></span>
+        </p>
+        <p>
+            Categoria:<br />
+            <input asp-for="Categoria" />
+            <span asp-validation-for="Categoria"></span>
+        </p>
+        <p>
+            Cantidad:<br />
+            <input asp-for="Cantidad" />
+            <span asp-validation-for="Cantidad"></span>
+        </p>
+        <p>
+            Fecha de vencimiento:<br />
+            <input asp-for="FechaVencimiento" />
+        </p>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <p><a asp-action="Index">Volver a la lista</a></p>
+</body>
+</html>
